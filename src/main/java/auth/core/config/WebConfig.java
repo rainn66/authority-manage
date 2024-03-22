@@ -29,7 +29,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(new SaveInterceptor())
                 .order(2)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/assets/**", "/common/**", "/*.ico", "/error", "/login", "/authority/get**", "/menu/get**");
+                .excludePathPatterns("/assets/**", "/common/**", "/*.ico", "/error", "/login");
     }
 
 }

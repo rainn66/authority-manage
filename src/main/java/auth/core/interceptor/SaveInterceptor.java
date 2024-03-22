@@ -23,6 +23,10 @@ public class SaveInterceptor implements HandlerInterceptor {
                 return true;
             }
 
+            if (request.getMethod().equals("GET")) {
+                return true;
+            }
+
             String authorityUrl = request.getHeader("nowURL");
             log.info("SaveInterceptor : [{}]", authorityUrl);
             HttpSession session = request.getSession();
